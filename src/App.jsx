@@ -1,9 +1,20 @@
-import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Header from "./components/Header";
+import FormPage from "./pages/FormPage";
+import MenuPage from "./pages/MenuPage";
+import ReviewPage from "./pages/ReviewPage";
 
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold">Hello Foods</h1>
+      <Header />
+      <main className="p-4">
+        <Routes>
+          <Route path="/" element={<FormPage />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/review" element={<ReviewPage />} />
+        </Routes>
+      </main>
     </>
   );
 }
