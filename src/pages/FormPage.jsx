@@ -22,7 +22,6 @@ const FormPage = () => {
     }
 
     dispatch(setFormData({ name, address, eventDate, numberOfPeople }));
-    console.log(setFormData.payload);
     toast.success("Data has been submitted");
     navigate("/menu");
   };
